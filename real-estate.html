@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zenas Real Estate | Premium Airbnb &amp; Property Experiences</title>
+<meta name="description" content="Discover premium Airbnb stays and trusted property investment opportunities in Uganda through Zenas Real Estate — a division of Zenas Group Limited.">
+<meta property="og:title" content="Zenas Real Estate | Premium Airbnb & Property Experiences">
+<meta property="og:description" content="Premium Airbnb stays and property investment in Kampala, Uganda.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="./zenas-group/public/estate/estate-4.jpeg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<link href="estate.css" rel="stylesheet">
+<style>
+body{background:#0e0c08;color:#fff}
+::-webkit-scrollbar-track{background:#0e0c08}
+::-webkit-scrollbar-thumb{background:#c8a96e}
+.lbl{color:#c8a96e}
+.warm{background:linear-gradient(135deg,#8b6945,#c8a96e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.gld{background:linear-gradient(135deg,#c8a96e,#f0d080,#c8a96e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.form-group input,.form-group select,.form-group textarea{color:#fff}
+.form-group select option{background:#0e0c08;color:#fff}
+
+/* ===== LIGHT THEME (real estate) ===== */
+body.theme-estate{background:#faf7f2;color:#1a2233}
+::-webkit-scrollbar-track{background:#f1ece2}
+.lbl{color:#a8843f}
+
+/* Nav */
+.theme-estate .nav-estate,
+.theme-estate .nav-estate.scrolled{
+  background:rgba(0, 0, 0, 0.95);
+  border-bottom:1px solid rgba(200,169,110,.3);
+  box-shadow:0 4px 20px rgba(11,20,38,.07);
+}
+.theme-estate .nav-text p:first-child{color:#e2e4e9}
+.theme-estate .nav-text p:last-child{color:#a8843f}
+.theme-estate .nav-links a{color:#ebedf1}
+.theme-estate .nav-links a:hover{color:#a8843f}
+.theme-estate .burger span{background:#0b1426}
+.theme-estate .mob-menu-estate{background:rgba(250,247,242,.98)}
+.theme-estate .mob-menu-estate a{color:#0b1426}
+.theme-estate .mob-menu-estate a:hover{color:#a8843f}
+.theme-estate .mob-close{color:#0b1426}
+
+/* Hero */
+.theme-estate .hero-estate{background:#faf7f2}
+.theme-estate .hero-estate .hero-panel{background:linear-gradient(155deg,#fffdf9 0%,#f6efe2 55%,#ecdfc6 100%)}
+.theme-estate .hero-estate .hero-panel::before{opacity:.35}
+.theme-estate .hero-estate .hero-panel::after{display:none}
+.theme-estate .hero-estate .badge-hero{background:rgba(200,169,110,.18);border-color:rgba(168,132,63,.5);color:#8b6945}
+.theme-estate .hero-estate .hero-h1{color:#0b1426}
+.theme-estate .hero-estate .hero-accent{color:#a8843f;-webkit-text-fill-color:#a8843f}
+.theme-estate .hero-estate .hero-p{color:#5b6475}
+.theme-estate .btn-hero-secondary{color:#0b1426;border-color:rgba(11,20,38,.35)}
+.theme-estate .btn-hero-secondary:hover{background:rgba(11,20,38,.05);border-color:#0b1426}
+.theme-estate .hero-trust{color:#5b6475}
+.theme-estate .hero-trust-dot{background:#a8843f}
+.theme-estate .hero-media-shade{background:none}
+
+/* Section backgrounds */
+#gallery{background:linear-gradient(180deg,#faf7f2 0%,#f1ece2 100%) !important}
+#properties{background:linear-gradient(180deg,#f1ece2 0%,#faf7f2 100%) !important}
+#investment{background:linear-gradient(135deg,#faf7f2 0%,#f1ece2 100%) !important}
+#contact{background:linear-gradient(180deg,#faf7f2 0%,#f1ece2 100%) !important}
+
+/* Gallery */
+.theme-estate .masonry-item{box-shadow:0 12px 30px rgba(11,20,38,.15)}
+
+/* Property cards */
+.theme-estate .prop-card{background:#fff;border:1px solid rgba(200,169,110,.25);box-shadow:0 12px 32px rgba(11,20,38,.08)}
+.theme-estate .prop-card:hover{box-shadow:0 22px 48px rgba(200,169,110,.25)}
+.theme-estate .prop-name{color:#0b1426 !important}
+.theme-estate .prop-loc{color:#a8843f !important}
+.theme-estate .prop-type{color:#7a8294 !important}
+.theme-estate .prop-rating span:nth-child(2){color:#0b1426 !important}
+.theme-estate .prop-rating span:nth-child(3){color:#8a91a1 !important}
+.theme-estate .tag{color:#5b6475;background:rgba(200,169,110,.12);border-color:rgba(200,169,110,.3)}
+
+/* Investment */
+#investment .container p:not(.lbl){color:#5b6475 !important}
+.theme-estate .invest-feat{background:#fff !important;border:1px solid rgba(200,169,110,.25) !important;box-shadow:0 10px 28px rgba(11,20,38,.06)}
+.theme-estate .invest-feat-title{color:#0b1426 !important}
+.theme-estate .invest-feat-desc{color:#5b6475 !important}
+
+/* Contact form */
+.theme-estate .form-wrap{background:#fff !important;border:1px solid rgba(200,169,110,.3) !important;box-shadow:0 18px 48px rgba(11,20,38,.08)}
+.theme-estate .form-group label{color:#3a4458}
+.theme-estate .form-group input,
+.theme-estate .form-group select,
+.theme-estate .form-group textarea{background:#faf7f2;color:#0b1426 !important;border:1px solid rgba(200,169,110,.45) !important}
+.theme-estate .form-group input::placeholder,
+.theme-estate .form-group textarea::placeholder{color:#8a91a1}
+.theme-estate .form-group input:focus,
+.theme-estate .form-group select:focus,
+.theme-estate .form-group textarea:focus{border-color:#a8843f !important}
+.theme-estate .form-group select option{background:#fff;color:#0b1426}
+.theme-estate .form-note{color:#5b6475}
+
+/* Contact cards */
+.theme-estate .contact-card{background:#fff;border:1px solid rgba(200,169,110,.25);box-shadow:0 10px 28px rgba(11,20,38,.07)}
+.theme-estate .contact-card p{color:#3a4458}
+.theme-estate .contact-card .contact-label{color:#a8843f !important}
+.theme-estate .contact-card .icon-mark{background:rgba(200,169,110,.12);color:#8b6945 !important;border-color:rgba(200,169,110,.35) !important}
+
+/* Footer stays dark on purpose, matching the home page */
+.footer{background:#0b1426 !important}
+
+
+/* ===== PLAIN COLOUR BUTTONS (no gradients) ===== */
+.btn-nav-gold,
+.btn-gold,
+.division-btn-gold{background:#c8a96e !important;background-image:none !important;color:#0b1426}
+.btn-nav-gold:hover,
+.btn-gold:hover,
+.division-btn-gold:hover{background:#b8954f !important}
+
+.btn-sky,
+.division-btn-blue{background:#0284c7 !important;background-image:none !important;color:#fff}
+.btn-sky:hover,
+.division-btn-blue:hover{background:#0369a1 !important}
+
+.nav-logo-icon{background:#c8a96e !important;background-image:none !important}
+/* ===== Gallery lightbox ===== */
+.masonry-item{cursor:zoom-in}
+/* taps always enlarge the photo instead of hitting the hidden button */
+.masonry-over, .masonry-over *{pointer-events:none}
+
+.lightbox{
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  background:rgba(11,20,38,.96);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:3rem 4.5rem;
+}
+.lightbox.open{display:flex}
+.lb-img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.lb-btn{
+  position:absolute;
+  width:48px;
+  height:48px;
+  border:none;
+  background:#c8a96e;
+  color:#0b1426;
+  font-size:1.4rem;
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.lb-btn:hover{background:#b8954f}
+.lb-close{top:1rem;right:1rem}
+.lb-prev{left:1rem;top:50%;transform:translateY(-50%)}
+.lb-next{right:1rem;top:50%;transform:translateY(-50%)}
+.lb-count{
+  position:absolute;
+  bottom:1rem;
+  left:50%;
+  transform:translateX(-50%);
+  color:#fff;
+  font-size:.85rem;
+  letter-spacing:.1em;
+}
+@media (max-width:768px){
+  .lightbox{padding:4rem .5rem}
+  .lb-btn{width:42px;height:42px}
+  .lb-prev{left:.5rem}
+  .lb-next{right:.5rem}
+}
+
+/* Bare line icons (no box) */
+.contact-icon,
+.invest-feat-icon{
+  display:block;
+  background:none;
+  border:none;
+  width:auto;
+  height:auto;
+  color:#a8843f;
+}
+.contact-icon{margin:0 0 .9rem}
+.invest-feat-icon{margin-bottom:.9rem}
+.contact-icon svg,
+.invest-feat-icon svg{
+  width:40px;
+  height:40px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.6;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.contact-icon svg{margin:0 auto;display:block}
+
+/* Equal-width contact cards, long emails don't stretch one card */
+.contact-cards{grid-template-columns:repeat(3,minmax(0,1fr))}
+.contact-card p{overflow-wrap:anywhere}
+
+
+
+</style>
+</head>
+<body class="theme-estate">
+
+<!-- NAV -->
+<nav class="nav nav-estate" id="nav">
+  <a class="nav-logo" href="index.html">
+    <img src="./RE.LOGO/Untitled Project (8).png" alt="Zenas Real Estate" class="nav-logo-img" id="navLogoImg">
+    <div class="nav-icon nav-logo-fallback" id="navLogoFallback">ZR</div>
+    <div class="nav-text"><p>ZENAS REAL ESTATE</p><p>Premium Properties</p></div>
+  </a>
+  <div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#gallery">Stays</a>
+    <a href="#properties">Properties</a>
+    <a href="#investment">Investment</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div class="nav-actions">
+    <a href="#contact" class="nav-cta-link"><button class="btn btn-estate btn-nav-cta">Book Stay</button></a>
+    <button class="burger" id="burger" type="button" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu mob-menu-estate" id="mobMenu">
+  <button class="mob-close" id="mobClose" type="button" aria-label="Close menu">✕</button>
+  <a href="#home">Home</a>
+  <a href="#gallery">Stays</a>
+  <a href="#properties">Properties</a>
+  <a href="#investment">Investment</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact"><button class="btn btn-estate" style="width:220px">Book Stay</button></a>
+</div>
+
+<!-- HERO -->
+<section class="hero hero-estate" id="home">
+  <div class="hero-panel">
+    <div class="hero-body">
+     
+      <h1 class="hero-h1">Find Spaces That<br><span class="hero-accent">Feel Like Home</span></h1>
+      <div class="hero-actions">
+        <a href="#gallery"><button class="btn btn-hero-primary">Explore Stays</button></a>
+        <a href="#contact"><button class="btn btn-hero-secondary">Book a Stay</button></a>
+      </div>
+      <div class="hero-trust">
+        
+      </div>
+    </div>
+  </div>
+  <div class="hero-media">
+    <div class="hero-slides" id="estateSlides">
+      <div class="slide active"><img src="./zenas-group/public/estate/estate-4.jpeg" alt="Luxury living room" loading="eager"></div>
+      <div class="slide"><img src="./zenas-group/public/estate/estate-5.jpeg" alt="Modern bedroom suite" loading="lazy"></div>
+      <div class="slide"><img src="./zenas-group/public/estate/estate-9.jpeg" alt="Rooftop terrace" loading="lazy"></div>
+      <div class="slide"><img src="./zenas-group/public/estate/estate-13.jpeg" alt="Premium apartment" loading="lazy"></div>
+    </div>
+    <video id="heroVid" class="hero-vid" src="./zenas-group/public/estate/estate-17.mp4" poster="./zenas-group/public/estate/estate-4.jpeg" autoplay muted loop playsinline></video>
+    <div class="hero-media-shade"></div>
+   
+    <div class="hero-location">Kampala, Uganda</div>
+  </div>
+</section>
+
+<!-- GALLERY MASONRY -->
+<section class="sec" id="gallery" style="background:linear-gradient(180deg, #1a1410 0%, #121008 100%)">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:3.5rem">
+      <p class="lbl" data-aos="fade-up">Our Spaces</p>
+      <h2 class="h2" data-aos="fade-up" data-aos-delay="80">Airbnb <span class="warm">Gallery</span></h2>
+   
+    </div>
+    
+    <div class="masonry" data-aos="fade-up" data-aos-delay="200">
+      <!-- Item 1 -->
+      <div class="masonry-item">
+        <img src="./zenas-group/public/estate/estate-4.jpeg" alt="Luxury living room">
+        <div class="masonry-over">
+          <p style="font-size:0.75rem;color:#c8a96e;margin-bottom:0.25rem">Kampala, Uganda</p>
+          <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:0.75rem">Luxury Living Room</p>
+          <a href="#contact"><button class="btn btn-estate" style="padding:0.55rem 1.35rem;font-size:0.82rem">View Details →</button></a>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="masonry-item">
+        <img src="./zenas-group/public/estate/estate-5.jpeg" alt="Modern bedroom suite">
+        <div class="masonry-over">
+          <p style="font-size:0.75rem;color:#c8a96e;margin-bottom:0.25rem">Kampala, Uganda</p>
+          <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:0.75rem">Modern Bedroom Suite</p>
+          <a href="#contact"><button class="btn btn-estate" style="padding:0.55rem 1.35rem;font-size:0.82rem">View Details →</button></a>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="masonry-item">
+        <img src="./zenas-group/public/estate/estate-6.jpeg" alt="Premium kitchen">
+        <div class="masonry-over">
+          <p style="font-size:0.75rem;color:#c8a96e;margin-bottom:0.25rem">Entebbe, Uganda</p>
+          <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:0.75rem">Premium Kitchen</p>
+          <a href="#contact"><button class="btn btn-estate" style="padding:0.55rem 1.35rem;font-size:0.82rem">View Details →</button></a>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="masonry-item">
+        <img src="./zenas-group/public/estate/estate-7.jpeg" alt="Cozy apartment studio">
+        <div class="masonry-over">
+          <p style="font-size:0.75rem;color:#c8a96e;margin-bottom:0.25rem">Kampala, Uganda</p>
+          <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:0.75rem">Cozy Apartment Studio</p>
+          <a href="#contact"><button class="btn btn-estate" style="padding:0.55rem 1.35rem;font-size:0.82rem">View Details →</button></a>
+        </div>
+      </div>
+      <!-- Item 5 -->
+      <div class="masonry-item">
+        <img src="./zenas-group/public/estate/estate-8.jpeg" alt="Airbnb lounge area">
+        <div class="masonry-over">
+          <p style="font-size:0.75rem;color:#c8a96e;margin-bottom:0.25rem">Wakiso, Uganda</p>
+          <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:0.75rem">Airbnb Lounge Area</p>
+          <a href="#contact"><button class="btn btn-estate" style="padding:0.55rem 1.35rem;font-size:0.82rem">View Details →</button></a>
+        </div>
+      </div>
+      <!-- Item 6 -->
+      <div class="masonry-item">
+        <img src="./zenas-group/public/estate/estate-9.jpeg" alt="Rooftop terrace">
+        <div class="masonry-over">
+          <p style="font-size:0.75rem;color:#c8a96e;margin-bottom:0.25rem">Kampala, Uganda</p>
+          <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:0.75rem">Rooftop Terrace</p>
+          <a href="#contact"><button class="btn btn-estate" style="padding:0.55rem 1.35rem;font-size:0.82rem">View Details →</button></a>
+        </div>
+      </div>
+      <!-- Item 7 -->
+      <div class="masonry-item">
+        <img src="./zenas-group/public/estate/estate-10.jpeg" alt="Bright master bedroom">
+        <div class="masonry-over">
+          <p style="font-size:0.75rem;color:#c8a96e;margin-bottom:0.25rem">Entebbe, Uganda</p>
+          <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:0.75rem">Bright Master Bedroom</p>
+          <a href="#contact"><button class="btn btn-estate" style="padding:0.55rem 1.35rem;font-size:0.82rem">View Details →</button></a>
+        </div>
+      </div>
+      <!-- Item 8 -->
+      <div class="masonry-item">
+        <img src="./zenas-group/public/estate/estate-11.jpeg" alt="Pool-view apartment">
+        <div class="masonry-over">
+          <p style="font-size:0.75rem;color:#c8a96e;margin-bottom:0.25rem">Kampala, Uganda</p>
+          <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:0.75rem">Pool-View Apartment</p>
+          <a href="#contact"><button class="btn btn-estate" style="padding:0.55rem 1.35rem;font-size:0.82rem">View Details →</button></a>
+        </div>
+      </div>
+      <!-- Item 9 -->
+      <div class="masonry-item">
+        <img src="./zenas-group/public/estate/estate-12.jpeg" alt="Elegant dining space">
+        <div class="masonry-over">
+          <p style="font-size:0.75rem;color:#c8a96e;margin-bottom:0.25rem">Kampala, Uganda</p>
+          <p style="font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:0.75rem">Elegant Dining Space</p>
+          <a href="#contact"><button class="btn btn-estate" style="padding:0.55rem 1.35rem;font-size:0.82rem">View Details →</button></a>
+        </div>
+      </div>
+    </div>
+    
+    <div style="text-align:center;margin-top:3rem" data-aos="fade-up">
+      <a href="#contact"><button class="btn btn-estate" style="padding:1rem 2.5rem">Browse All Properties →</button></a>
+    </div>
+  </div>
+</section>
+
+<
+<!-- INVESTMENT SECTION -->
+<section class="sec" id="investment" style="background:linear-gradient(135deg, #1a1208 0%, #140f06 50%, #0e0c08 100%);position:relative;overflow:hidden">
+  <!-- Background radial glow -->
+  <div style="position:absolute;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 70% 50% at 50% 50%, rgba(200,169,110,0.08) 0%, transparent 70%)"></div>
+  
+  <div class="container" style="position:relative;z-index:1">
+    <div class="invest-grid">
+      <!-- Left text -->
+      <div>
+        <p class="lbl" data-aos="fade-up">Property Investment</p>
+        <h2 class="h2" data-aos="fade-up" data-aos-delay="80">Interested in <span class="warm">Property Investment?</span></h2>
+        <p style="color:rgba(255,255,255,0.6);line-height:1.8;margin-bottom:2rem;font-size:0.95rem" data-aos="fade-up" data-aos-delay="120">We also assist clients in finding trusted property and land opportunities. Whether you're looking to invest, build, or develop — our team connects you with verified real estate opportunities across Uganda and East Africa.</p>
+        <a href="#contact" data-aos="fade-up" data-aos-delay="160"><button class="btn btn-estate">Talk to an Advisor →</button></a>
+      </div>
+      
+      <!-- Right features -->
+      <div class="invest-features" data-aos="fade-up" data-aos-delay="200">
+        <div class="invest-feat" style="background:rgba(255,255,255,0.04);border:1px solid rgba(200,169,110,0.1)">
+          <div class="invest-feat-icon"></div>
+          <div class="invest-feat-title" style="color:#fff">Land Opportunities</div>
+          <div class="invest-feat-desc" style="color:rgba(255,255,255,0.55)">We help you find verified land in prime locations across Uganda.</div>
+        </div>
+        <div class="invest-feat" style="background:rgba(255,255,255,0.04);border:1px solid rgba(200,169,110,0.1)">
+          <div class="invest-feat-icon"></div>
+          <div class="invest-feat-title" style="color:#fff">Development Projects</div>
+          <div class="invest-feat-desc" style="color:rgba(255,255,255,0.55)">Connect with trusted construction and development partners.</div>
+        </div>
+        <div class="invest-feat" style="background:rgba(255,255,255,0.04);border:1px solid rgba(200,169,110,0.1)">
+          <div class="invest-feat-icon"></div>
+          <div class="invest-feat-title" style="color:#fff">Investment Advisory</div>
+          <div class="invest-feat-desc" style="color:rgba(255,255,255,0.55)">Expert guidance on real estate investment strategies and returns.</div>
+        </div>
+        <div class="invest-feat" style="background:rgba(255,255,255,0.04);border:1px solid rgba(200,169,110,0.1)">
+          <div class="invest-feat-icon"></div>
+          <div class="invest-feat-title" style="color:#fff">Trusted Partners</div>
+          <div class="invest-feat-desc" style="color:rgba(255,255,255,0.55)">We only work with verified, reputable property sellers and agents.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="sec" id="contact" style="background:linear-gradient(180deg, #0e0c08 0%, #080604 100%)">
+  <div class="container" style="max-width:680px;text-align:center">
+    <p class="lbl" data-aos="fade-up">Get In Touch</p>
+    <h2 class="h2" data-aos="fade-up" data-aos-delay="80">Book Your Stay or<br><span class="warm">Inquire About Properties</span></h2>
+    
+    <form class="form-wrap glassy-warm" style="margin-top:2.5rem;text-align:left;background:rgba(255,255,255,0.03);border:1px solid rgba(200,169,110,0.12)" data-aos="fade-up" data-aos-delay="160" data-inquiry="Real Estate">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" name="name" placeholder="Your full name" required style="border:1px solid rgba(200,169,110,0.15)">
+        </div>
+        <div class="form-group">
+          <label>Phone / Email</label>
+          <input type="text" name="contact" placeholder="+256 or email address" required style="border:1px solid rgba(200,169,110,0.15)">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>I am interested in</label>
+        <select name="interest" style="border:1px solid rgba(200,169,110,0.15)">
+          <option value="">Select an option...</option>
+          <option>Airbnb / Short Stay Booking</option>
+          <option>Long-Term Property Rental</option>
+          <option>Property Purchase</option>
+          <option>Land Investment</option>
+          <option>General Inquiry</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea name="message" rows="4" placeholder="Tell us your requirements, preferred dates, budget..." style="border:1px solid rgba(200,169,110,0.15)"></textarea>
+      </div>
+      <button type="submit" class="btn btn-estate" style="width:100%;padding:1rem;font-size:0.95rem;box-shadow:0 0 30px rgba(139,105,69,0.3)">Send via WhatsApp</button>
+      <p class="form-note">We typically reply within 24 hours.</p>
+    </form>
+    
+    <div class="grid3 contact-cards" style="margin-top:3rem" data-aos="fade-up" data-aos-delay="240">
+  <div class="contact-card">
+    <div class="contact-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    </div>
+    <p class="contact-label">Phone</p>
+    <p><a href="tel:+256786413870">+256 786 413 870</a></p>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+    </div>
+    <p class="contact-label">Email</p>
+    <p><a href="mailto:estate@zenasgroup.com">estate@zenasgroup.com</a></p>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+    </div>
+    <p class="contact-label">Location</p>
+    <p>Kampala, Uganda</p>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" style="background:#060402;border-top:1px solid rgba(200,169,110,0.1)">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">
+        <svg class="nav-logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 42px; height: 42px; flex-shrink: 0;">
+          <path d="M 10 42 L 50 22 L 90 42 L 90 51 L 50 31 L 10 51 Z" fill="#e8c97e"/>
+          <path d="M 22 36 L 22 25 L 30 25 L 30 32 Z" fill="#e8c97e"/>
+          <path d="M 38 45 L 68 37.5 L 68 46 L 40 53 Z" fill="#e8c97e"/>
+          <path d="M 37 78 L 67 78 L 67 52.5 L 37 60 L 48 69 L 37 69 Z" fill="#e8c97e"/>
+        </svg>
+        <div class="nav-text">
+          <p>ZENAS REAL ESTATE</p>
+          <p style="color:#c8a96e;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase">Premium Properties</p>
+        </div>
+      </div>
+      <p class="footer-about">Your trusted partner for premium Airbnb stays, property rentals, and real estate investment in Uganda.</p>
+    </div>
+    <div>
+      <p class="footer-h4">Quick Links</p>
+      <ul class="footer-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#gallery">Stays</a></li>
+        <li><a href="#properties">Properties</a></li>
+        <li><a href="#investment">Investment</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-h4">Contact Us</p>
+      <ul class="footer-links" style="color:rgba(255,255,255,.45);font-size:.82rem;line-height:1.6">
+        <li><a href="tel:+256700000000">+256 786413870</a></li>
+        <li><a href="mailto:estate@zenasgroup.com">estate@zenasgroup.com</a></li>
+        <li>Kampala, Uganda</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 Zenas Real Estate · A division of Zenas Group Limited &nbsp;|&nbsp;
+     Desighned By CODE X Academy Uganda 
+    <a href="index.html" style="color:rgba(255,255,255,.35)">← Back to Zenas Group</a>
+  </div>
+</footer>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" aria-modal="true" role="dialog">
+  <button class="lb-btn lb-close" id="lbClose" type="button" aria-label="Close">✕</button>
+  <button class="lb-btn lb-prev" id="lbPrev" type="button" aria-label="Previous photo">‹</button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <button class="lb-btn lb-next" id="lbNext" type="button" aria-label="Next photo">›</button>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+
+<script src="site.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+AOS.init({duration:700,once:true,offset:80});
+
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+
+const navLogoImg=document.getElementById('navLogoImg');
+const navLogoFallback=document.getElementById('navLogoFallback');
+if(navLogoImg&&navLogoFallback){
+  const showFallback=()=>{
+    navLogoImg.classList.add('hide');
+    navLogoFallback.classList.add('show');
+  };
+  navLogoImg.addEventListener('error',showFallback);
+  if(navLogoImg.complete&&navLogoImg.naturalWidth===0)showFallback();
+}
+
+document.getElementById('burger').onclick=()=>document.getElementById('mobMenu').classList.add('open');
+document.getElementById('mobClose').onclick=()=>document.getElementById('mobMenu').classList.remove('open');
+
+const heroVid = document.getElementById('heroVid');
+const estateSlides = document.querySelectorAll('#estateSlides .slide');
+let estateCur = 0;
+let estateInterval;
+
+function goEstateSlide(n) {
+  if (!estateSlides.length) return;
+  estateSlides[estateCur].classList.remove('active');
+  estateCur = n;
+  estateSlides[estateCur].classList.add('active');
+}
+
+function startEstateSlideshow() {
+  if (estateInterval || estateSlides.length < 2) return;
+  estateInterval = setInterval(() => {
+    goEstateSlide((estateCur + 1) % estateSlides.length);
+  }, 5000);
+}
+
+if (heroVid) {
+  heroVid.addEventListener('loadeddata', () => {
+    heroVid.classList.add('ready');
+  });
+  heroVid.addEventListener('error', () => {
+    heroVid.style.display = 'none';
+    startEstateSlideshow();
+  });
+  heroVid.play().catch(() => startEstateSlideshow());
+} else {
+  startEstateSlideshow();
+}
+// ===== Extra gallery photos =====
+const photoFolder = './zenas estate section photos and videos/';
+const extraPhotos = [
+  'WhatsApp Image 2026-03-26 at 11.11.16 AM.jpeg',
+  'WhatsApp Image 2026-03-26 at 11.11.16 AM (1).jpeg',
+  'WhatsApp Image 2026-03-26 at 11.11.16 AM (2).jpeg',
+  'WhatsApp Image 2026-03-26 at 11.11.17 AM.jpeg',
+  'WhatsApp Image 2026-03-26 at 11.11.17 AM (1).jpeg',
+  'WhatsApp Image 2026-03-26 at 11.11.18 AM (1).jpeg',
+  'WhatsApp Image 2026-03-26 at 11.11.18 AM (2).jpeg',
+  'WhatsApp Image 2026-03-26 at 11.11.19 AM.jpeg',
+  'WhatsApp Image 2026-03-26 at 11.11.19 AM (1).jpeg',
+  'WhatsApp Image 2026-03-26 at 11.11.19 AM (2).jpeg',
+  'WhatsApp Image 2026-03-26 at 11.11.20 AM.jpeg',
+  'WhatsApp Image 2026-03-26 at 11.11.20 AM (1).jpeg',
+  'WhatsApp Image 2026-03-26 at 11.11.20 AM (2).jpeg',
+  'WhatsApp Image 2026-03-26 at 11.11.21 AM.jpeg',
+  'WhatsApp Image 2026-03-26 at 11.11.21 AM (1).jpeg',
+  'ZENAS WELCOME.jpeg'
+];
+
+const masonryEl = document.querySelector('.masonry');
+extraPhotos.forEach((name, i) => {
+  const item = document.createElement('div');
+  item.className = 'masonry-item';
+  const img = document.createElement('img');
+  img.src = encodeURI(photoFolder + name);
+  img.alt = 'Zenas stay photo ' + (i + 1);
+  img.loading = 'lazy';
+  item.appendChild(img);
+  masonryEl.appendChild(item);
+});
+
+// ===== Lightbox =====
+(function () {
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCount = document.getElementById('lbCount');
+  let imgs = [];
+  let idx = 0;
+
+  function show(i) {
+    idx = (i + imgs.length) % imgs.length;
+    lbImg.src = imgs[idx].currentSrc || imgs[idx].src;
+    lbImg.alt = imgs[idx].alt;
+    lbCount.textContent = (idx + 1) + ' / ' + imgs.length;
+  }
+
+  function openLb(img) {
+    imgs = Array.from(document.querySelectorAll('.masonry-item img'));
+    show(imgs.indexOf(img));
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLb() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  masonryEl.addEventListener('click', e => {
+    const item = e.target.closest('.masonry-item');
+    if (!item) return;
+    e.preventDefault();
+    openLb(item.querySelector('img'));
+  });
+
+  document.getElementById('lbClose').onclick = closeLb;
+  document.getElementById('lbPrev').onclick = () => show(idx - 1);
+  document.getElementById('lbNext').onclick = () => show(idx + 1);
+
+  // click on the dark background closes it
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+
+  // keyboard
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft') show(idx - 1);
+    if (e.key === 'ArrowRight') show(idx + 1);
+  });
+
+  // swipe on phones
+  let startX = 0;
+  lb.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 50) show(dx < 0 ? idx + 1 : idx - 1);
+  }, { passive: true });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+/* Zenas Real Estate — Hero & theme accents */
+.theme-estate {
+  --estate-bg: #0e0c08;
+  --estate-panel: #1a1410;
+  --estate-brown: #8b6945;
+  --estate-gold: #c8a96e;
+  --estate-gold-light: #e8c97e;
+  --estate-cream: #f5f0e8;
+  --estate-text: #fff;
+  --estate-muted: rgba(255, 255, 255, 0.65);
+  --estate-nav-h: 72px;
+}
+
+/* ——— Navigation ——— */
+.theme-estate .nav-estate {
+  background: rgba(14, 12, 8, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(200, 169, 110, 0.15);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+.theme-estate .nav-estate.scrolled {
+  background: rgba(20, 16, 12, 0.97);
+  border-bottom-color: rgba(200, 169, 110, 0.28);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.theme-estate .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.theme-estate .nav-logo-img {
+  height: 44px;
+  width: auto;
+  max-width: 56px;
+  object-fit: contain;
+  flex-shrink: 0;
+  display: block;
+}
+
+.theme-estate .nav-logo-fallback {
+  display: none;
+  width: 44px;
+  height: 44px;
+
+  background: linear-gradient(135deg, var(--estate-brown), var(--estate-gold));
+  color: #fff;
+  font-weight: 900;
+  font-size: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.theme-estate .nav-logo-fallback.show {
+  display: flex;
+}
+
+.theme-estate .nav-logo-img.hide {
+  display: none;
+}
+
+.theme-estate .nav-icon {
+  background: linear-gradient(135deg, var(--estate-brown), var(--estate-gold));
+  color: #fff;
+}
+
+.theme-estate .nav-text {
+  min-width: 0;
+}
+
+.theme-estate .nav-text p:first-child {
+  color: #fff;
+  font-size: 0.82rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.theme-estate .nav-text p:last-child {
+  color: var(--estate-gold);
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+}
+
+.theme-estate .nav-links a {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 500;
+}
+
+.theme-estate .nav-links a:hover {
+  color: var(--estate-gold-light);
+}
+
+.theme-estate .nav-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.theme-estate .btn-nav-cta {
+  padding: 0.6rem 1.4rem !important;
+  font-size: 0.82rem !important;
+  white-space: nowrap;
+}
+
+.theme-estate .burger span {
+  background: var(--estate-gold-light);
+}
+
+.theme-estate .mob-menu-estate {
+  background: rgba(14, 12, 8, 0.98);
+  backdrop-filter: blur(12px);
+}
+
+.theme-estate .mob-menu-estate a {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.theme-estate .mob-menu-estate a:hover {
+  color: var(--estate-gold-light);
+}
+
+.theme-estate .mob-close {
+  color: var(--estate-gold-light);
+}
+
+@media (max-width: 900px) {
+  .theme-estate .nav-text p:first-child {
+    font-size: 0.72rem;
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .theme-estate .nav-estate {
+    padding: 1rem 1.25rem;
+  }
+
+  .theme-estate .nav-logo-img {
+    height: 38px;
+    max-width: 48px;
+  }
+
+  .theme-estate .nav-text p:last-child {
+    display: none;
+  }
+
+  .theme-estate .btn-nav-cta {
+    display: none;
+  }
+}
+
+/* Hero — split layout */
+.theme-estate .hero-estate {
+  display: grid;
+  grid-template-columns: minmax(300px, 44%) 1fr;
+  min-height: calc(100vh - 0px);
+  max-height: 900px;
+  padding-top: 72px;
+  align-items: stretch;
+  overflow: hidden;
+  background: var(--estate-bg);
+}
+
+.theme-estate .hero-estate .hero-panel {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  padding: 3rem 3rem 3rem 2.5rem;
+  background: linear-gradient(
+    155deg,
+    
+    
+    
+   
+    #573b12 100%
+  );
+}
+
+.theme-estate .hero-estate .hero-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8a96e' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.theme-estate .hero-estate .hero-panel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: 60px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(200, 169, 110, 0.12));
+  pointer-events: none;
+}
+
+.theme-estate .hero-estate .hero-body {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  max-width: 400px;
+  padding: 0;
+  margin: 0;
+}
+
+.theme-estate .hero-estate .badge-hero {
+  display: inline-block;
+  padding: 0.45rem 1.2rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  background: rgba(200, 169, 110, 0.2);
+  border: 1px solid rgba(232, 201, 126, 0.45);
+  color: var(--estate-gold-light);
+}
+
+.theme-estate .hero-estate .hero-h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.5rem, 5vw, 4.35rem);
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 1.2rem;
+}
+
+.theme-estate .hero-estate .hero-accent {
+  color: var(--estate-gold-light);
+  -webkit-text-fill-color: var(--estate-gold-light);
+  background: none;
+}
+
+.theme-estate .hero-estate .hero-p {
+  color: var(--estate-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  font-weight: 400;
+  letter-spacing: 0;
+  margin-bottom: 2rem;
+  max-width: 360px;
+}
+
+.theme-estate .hero-estate .hero-actions {
+  justify-content: flex-start;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.theme-estate .btn-hero-primary {
+  background: linear-gradient(135deg, var(--estate-gold), var(--estate-gold-light));
+  color: #1a1410;
+  padding: 0.95rem 1.85rem;
+  
+  border: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: 0 8px 32px rgba(200, 169, 110, 0.35);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.theme-estate .btn-hero-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(200, 169, 110, 0.45);
+}
+
+.theme-estate .btn-hero-secondary {
+  background: transparent;
+  color: #fff;
+  padding: 0.95rem 1.85rem;
+ 
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+.theme-estate .btn-hero-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.theme-estate .hero-trust {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.theme-estate .hero-trust-dot {
+  width: 4px;
+  height: 4px;
+  
+  background: rgba(200, 169, 110, 0.5);
+}
+
+.theme-estate .hero-media {
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  background: #121008;
+}
+
+.theme-estate .hero-slides {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.theme-estate .hero-slides .slide {
+  position: absolute;
+  inset: 0;
+}
+
+.theme-estate .hero-slides .slide {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.theme-estate .hero-slides .slide.active {
+  opacity: 1;
+}
+
+.theme-estate .hero-slides .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.theme-estate .hero-estate .hero-vid {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+.theme-estate .hero-estate .hero-vid.ready {
+  opacity: 1;
+}
+
+.theme-estate .hero-estate .hero-vid.ready ~ .hero-slides {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.theme-estate .hero-media-shade {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(26, 20, 16, 0.5) 0%,
+    transparent 25%,
+    transparent 65%,
+    rgba(14, 12, 8, 0.35) 100%
+  );
+}
+
+.theme-estate .hero-location {
+  position: absolute;
+  bottom: 1.75rem;
+  left: 1.75rem;
+  z-index: 5;
+  padding: 0.5rem 1.1rem;
+
+  background: none;
+  
+  color: var(--estate-gold-light);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+ 
+}
+
+.theme-estate .hero-feature-pill {
+  position: absolute;
+  top: 1.75rem;
+  right: 1.75rem;
+  z-index: 5;
+  padding: 0.55rem 1rem;
+  
+  background: rgba(255, 255, 255, 0.95);
+  color: #1a1410;
+  font-size: 0.78rem;
+  font-weight: 700;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.2);
+}
+
+.theme-estate .hero-feature-pill span {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 500;
+  color: var(--estate-brown);
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 960px) {
+  .theme-estate .hero-estate {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 50vh;
+    max-height: none;
+    min-height: auto;
+    padding-top: 64px;
+  }
+
+  .theme-estate .hero-estate .hero-panel {
+    order: 2;
+    padding: 2.5rem 1.5rem 3rem;
+  }
+
+  .theme-estate .hero-media {
+    order: 1;
+    min-height: 50vh;
+  }
+
+  .theme-estate .hero-estate .hero-body {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .theme-estate .hero-estate .hero-actions,
+  .theme-estate .hero-trust {
+    justify-content: center;
+  }
+
+  .theme-estate .hero-estate .hero-p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Estate cards — larger & polished */
+.theme-estate .masonry {
+  column-gap: 1.35rem;
+}
+
+.theme-estate .masonry-item {
+  margin-bottom: 1.35rem;
+ 
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.28);
+}
+
+.theme-estate .masonry-item:hover {
+  box-shadow: 0 20px 48px rgba(139, 105, 69, 0.2);
+}
+
+.theme-estate .masonry-over {
+  padding: 1.6rem;
+}
+
+.theme-estate .prop-card {
+  border: 1px solid rgba(200, 169, 110, 0.18);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.28);
+}
+
+.theme-estate .prop-card:hover {
+  box-shadow: 0 24px 56px rgba(139, 105, 69, 0.25);
+}
+
+.theme-estate .prop-img {
+  height: 250px;
+}
+
+.theme-estate .prop-body {
+  padding: 1.6rem 1.5rem 1.75rem;
+}
+
+.theme-estate .prop-name {
+  font-size: 1.2rem;
+}
+
+.theme-estate .contact-card {
+  min-height: 170px;
+  padding: 1.85rem 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(200, 169, 110, 0.15);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.2);
+}
+
+.theme-estate .contact-card:hover {
+  border-color: rgba(200, 169, 110, 0.35);
+  box-shadow: 0 16px 44px rgba(139, 105, 69, 0.15);
+}
+
+.theme-estate .invest-feat {
+  padding: 2rem 1.75rem;
+
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(200, 169, 110, 0.1);
+}
+
+@media (max-width: 480px) {
+  .theme-estate .hero-estate .hero-h1 {
+    font-size: 1.85rem;
+  }
+
+  .theme-estate .hero-estate .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .theme-estate .hero-estate .hero-actions a,
+  .theme-estate .hero-estate .hero-actions button {
+    width: 100%;
+  }
+}

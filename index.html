@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zenas Group Limited | Building Experiences Across Travel & Real Estate</title>
+  <meta name="description"
+    content="Zenas Group Limited — A premier brand delivering world-class travel and luxury real estate experiences across East Africa and beyond." />
+  <meta property="og:title" content="Zenas Group Limited | Travel & Real Estate" />
+  <meta property="og:description" content="Building experiences across travel and real estate in Uganda and East Africa." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./zenas-group/public/hero/hero-bg.png" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #050a14;
+      color: #fff;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #e7edf8;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #c8a96e;
+      border-radius: 0px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.2rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.4s ease;
+    }
+
+    nav.scrolled {
+      background: rgba(5, 10, 20, 0.88);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(200, 169, 110, 0.15);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .nav-logo-icon {
+      width: 42px;
+      height: 42px;
+   
+      background: linear-gradient(135deg, #c8a96e, #e8c97e);
+      color: #050a14;
+      font-weight: 900;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-logo-text p:first-child {
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+    }
+
+    .nav-logo-text p:last-child {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      color: #c8a96e;
+      text-transform: uppercase;
+    }
+
+    .nav-btns {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+    }
+
+    .btn-nav-outline {
+      padding: 0.6rem 1.4rem;
+     
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s;
+      background: transparent;
+      font-family: inherit;
+    }
+
+    .btn-nav-outline:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #fff;
+      transform: translateY(-2px);
+    }
+
+    .btn-nav-gold {
+      padding: 0.6rem 1.4rem;
+      
+      border: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      background: linear-gradient(135deg, #c8a96e, #e8c97e);
+      color: #050a14;
+      font-family: inherit;
+      transition: all 0.3s;
+    }
+
+    .btn-nav-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(200, 169, 110, 0.4);
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #fff;
+     
+      transition: all 0.3s;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(5, 10, 20, 0.97);
+      z-index: 99;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .mobile-menu.open {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0.75rem 2rem;
+    }
+
+    .mobile-close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #fff;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('./zenas-group/public/hero/WhatsApp Image 2026-03-26 at 11.11.18 AM.jpeg');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.5;
+      transition: transform 8s ease;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(5, 10, 20, 0.4) 0%, rgba(5, 10, 20, 0.2) 40%, rgba(5, 10, 20, 0.7) 80%, rgba(5, 10, 20, 0.97) 100%);
+    }
+
+    .orb {
+      position: absolute;
+     
+      pointer-events: none;
+      filter: blur(80px);
+      animation: orbFloat 8s ease-in-out infinite;
+    }
+
+    .orb1 {
+      width: 500px;
+      height: 500px;
+      background: rgba(200, 169, 110, 0.22);
+      left: -10%;
+      top: 5%;
+      animation-delay: 0s;
+    }
+
+    .orb2 {
+      width: 400px;
+      height: 400px;
+      background: rgba(56, 189, 248, 0.12);
+      right: -5%;
+      top: 40%;
+      animation-delay: 3s;
+    }
+
+    .orb3 {
+      width: 350px;
+      height: 350px;
+      background: rgba(200, 169, 110, 0.15);
+      left: 40%;
+      top: -5%;
+      animation-delay: 6s;
+    }
+
+    @keyframes orbFloat {
+
+      0%,
+      100% {
+        transform: translate(0, 0) scale(1);
+      }
+
+      33% {
+        transform: translate(20px, -15px) scale(1.05);
+      }
+
+      66% {
+        transform: translate(-15px, 12px) scale(0.97);
+      }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 0 1.5rem;
+      max-width: 900px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      padding: 0.5rem 1.4rem;
+    
+      margin-bottom: 2rem;
+      background: rgba(200, 169, 110, 0.12);
+      border: 1px solid rgba(200, 169, 110, 0.4);
+      color: #e8c97e;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      animation: fadeUp 0.8s ease 0.2s both;
+    }
+
+    .hero-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      line-height: 1;
+      font-size: clamp(3rem, 8vw, 7rem);
+      color: #fff;
+      margin-bottom: 1.2rem;
+      animation: fadeUp 1s ease 0.4s both;
+    }
+
+    .hero-title .gold {
+      background: linear-gradient(135deg, #c8a96e, #f0d080, #c8a96e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+      animation: fadeUp 0.9s ease 0.7s both;
+    }
+
+    .hero-sub span {
+      color: #e8c97e;
+      font-weight: 500;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp 0.9s ease 1s both;
+    }
+
+    .btn-sky {
+      padding: 1rem 2.5rem;
+     
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      font-family: inherit;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 0 30px rgba(56, 189, 248, 0.3);
+    }
+
+    .btn-sky:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(56, 189, 248, 0.45);
+    }
+
+    .btn-gold {
+      padding: 1rem 2.5rem;
+    
+      background: linear-gradient(135deg, #c8a96e, #e8c97e);
+      color: #050a14;
+      font-weight: 600;
+      font-size: 0.95rem;
+      font-family: inherit;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 0 30px rgba(200, 169, 110, 0.3);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(200, 169, 110, 0.5);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 2;
+      animation: fadeIn 1s ease 2s both;
+    }
+
+    .scroll-hint span {
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, rgba(200, 169, 110, 0.8), transparent);
+      animation: scrollLine 1.5s ease-in-out infinite;
+    }
+
+    @keyframes scrollLine {
+
+      0%,
+      100% {
+        transform: scaleY(1);
+        opacity: 1;
+      }
+
+      50% {
+        transform: scaleY(0.5);
+        opacity: 0.4;
+      }
+    }
+
+    /* DIVISIONS */
+    .divisions {
+      padding: 8rem 2rem;
+      background: linear-gradient(180deg, #050a14 0%, #071220 100%);
+    }
+
+    .section-label {
+      text-align: center;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #c8a96e;
+      margin-bottom: 1rem;
+    }
+
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: #c8a96e;
+      margin-right: 0.75rem;
+      vertical-align: middle;
+      opacity: 0.6;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.55);
+      max-width: 500px;
+      margin: 0 auto 4rem;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .gold-text {
+      background: linear-gradient(135deg, #c8a96e, #f0d080);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .sky-text {
+      background: linear-gradient(135deg, #38bdf8, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .divisions-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.25rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .division-card {
+      
+      overflow: hidden;
+      position: relative;
+      height: 460px;
+      cursor: pointer;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .division-card:hover {
+      transform: translateY(-12px) scale(1.01);
+      box-shadow: 0 32px 72px rgba(0, 0, 0, 0.55);
+    }
+
+    .division-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+
+    .division-card:hover img {
+      transform: scale(1.08);
+    }
+
+    .division-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.15) 50%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 2.35rem 2.25rem;
+    }
+
+    .division-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .division-name {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .division-desc {
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 1.4rem;
+      line-height: 1.6;
+      max-width: 320px;
+    }
+
+    .division-btn {
+      display: inline-block;
+      padding: 0.75rem 1.85rem;
+     
+      font-size: 0.88rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.3s;
+    }
+
+    .division-btn-blue {
+      background: linear-gradient(135deg, #0284c7, #38bdf8);
+      color: #fff;
+    }
+
+    .division-btn-gold {
+      background: linear-gradient(135deg, #c8a96e, #e8c97e);
+      color: #050a14;
+    }
+
+    .division-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .accent-bar {
+      width: 60px;
+      height: 3px;
+      
+      margin-bottom: 1rem;
+    }
+
+    .accent-bar-blue {
+      background: linear-gradient(90deg, #38bdf8, #0284c7);
+    }
+
+    .accent-bar-gold {
+      background: linear-gradient(90deg, #c8a96e, #e8c97e);
+    }
+
+    /* WHY US */
+    .why {
+      padding: 7rem 2rem;
+      background: #071220;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    .why-card {
+      padding: 2.35rem 2rem;
+     
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.35s;
+      text-align: center;
+      min-height: 220px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+    }
+
+    .why-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(200, 169, 110, 0.3);
+      background: rgba(200, 169, 110, 0.08);
+      box-shadow: 0 20px 48px rgba(200, 169, 110, 0.12);
+    }
+
+    .feat-icon {
+      width: 54px;
+      height: 54px;
+     
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin: 0 auto 1rem;
+      background: rgba(200, 169, 110, 0.1);
+      border: 1px solid rgba(200, 169, 110, 0.25);
+      color: #e8c97e;
+    }
+
+    .contact-home {
+      padding: 6rem 2rem;
+      background: linear-gradient(180deg, #071220 0%, #050a14 100%);
+      text-align: center;
+    }
+
+    .contact-home-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      max-width: 1150px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .contact-home-card {
+      padding: 2.35rem 2rem;
+      
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+      color: inherit;
+      min-height: 200px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+    }
+
+    .contact-home-card:hover {
+      border-color: rgba(200, 169, 110, 0.35);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 48px rgba(200, 169, 110, 0.1);
+    }
+
+    .contact-home-tag {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-home-card h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    .contact-home-card p {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.6;
+      margin-bottom: 0.35rem;
+    }
+
+    .contact-home-card a {
+      color: rgba(255, 255, 255, 0.75);
+      transition: color 0.2s;
+    }
+
+    .contact-home-card a:hover {
+      color: #c8a96e;
+    }
+
+    .contact-home-cta {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #c8a96e !important;
+    }
+
+    .why-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .why-desc {
+      font-size: 0.83rem;
+      color: rgba(255, 255, 255, 0.55);
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #020810;
+      border-top: 1px solid rgba(200, 169, 110, 0.1);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.4);
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #c8a96e;
+    }
+
+    .footer-copy {
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, 0.25);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .nav-btns {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .divisions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .division-card {
+        height: 380px;
+      }
+
+      .contact-home-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-btns a,
+      .hero-btns button {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    /* ===== LIGHT THEME OVERRIDES ===== */
+body{background:#faf7f2;color:#1a2233}
+::-webkit-scrollbar-track{background:#f1ece2}
+
+/* Nav: white text over hero, dark text once scrolled */
+nav{color:#fff}
+nav.scrolled{
+  color:#0b1426;
+  background:rgba(255,255,255,.92);
+  border-bottom:1px solid rgba(200,169,110,.3);
+  box-shadow:0 4px 20px rgba(0,0,0,.06);
+}
+nav.scrolled .btn-nav-outline{color:#0b1426;border-color:rgba(11,20,38,.3)}
+nav.scrolled .btn-nav-outline:hover{background:rgba(11,20,38,.05);border-color:#0b1426}
+nav.scrolled .hamburger span{background:#0b1426}
+
+/* Hero: full-screen clear image, no fade */
+.hero{background:#0b1426}
+.hero-bg{opacity:1}
+.hero-overlay{
+  background:linear-gradient(to bottom,
+    rgba(5,10,20,.35) 0%,
+    rgba(5,10,20,.12) 25%,
+    rgba(5,10,20,.12) 75%,
+    rgba(5,10,20,.3) 100%);
+}
+.scroll-hint span{color:rgba(255,255,255,.8)}
+.scroll-line{background:linear-gradient(to bottom,rgba(255,255,255,.9),transparent)}
+
+/* Section text */
+.section-label{color:#a8843f}
+.section-label::before{background:#a8843f}
+.section-title{color:#0b1426}
+.section-sub{color:#5b6475}
+.gold-text{background:linear-gradient(135deg,#8b6945,#c8a96e);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* Sections */
+.divisions{background:linear-gradient(180deg,#faf7f2 0%,#f1ece2 100%)}
+.division-card{box-shadow:0 20px 50px rgba(11,20,38,.18);border:none}
+
+.why{background:#f1ece2}
+.why-card{background:#fff;border:1px solid rgba(200,169,110,.25);box-shadow:0 10px 30px rgba(11,20,38,.07)}
+.why-card:hover{background:#fffaf0;border-color:rgba(200,169,110,.6);box-shadow:0 18px 40px rgba(200,169,110,.2)}
+.why-title{color:#0b1426}
+.why-desc{color:#5b6475}
+.feat-icon{background:rgba(200,169,110,.15);color:#8b6945}
+
+
+.contact-home{background:linear-gradient(180deg,#f1ece2 0%,#faf7f2 100%)}
+.contact-home-card{background:#fff;border:1px solid rgba(200,169,110,.25);box-shadow:0 10px 30px rgba(11,20,38,.07)}
+.contact-home-card:hover{border-color:rgba(200,169,110,.6);box-shadow:0 18px 40px rgba(200,169,110,.2)}
+.contact-home-card h3{color:#0b1426}
+.contact-home-card p{color:#5b6475}
+.contact-home-card a{color:#3a4458}
+.contact-home-card a:hover{color:#a8843f}
+.contact-home-cta{color:#a8843f !important}
+
+/* Footer stays dark on purpose */
+footer{background:#0b1426}
+
+/* Parallax hero: image stays still, page scrolls over it */
+.hero{clip-path:inset(0)}
+.hero-bg{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  transform:none !important;
+  transition:none;
+}
+.hero-content{will-change:transform,opacity}
+
+/* Feature icons */
+.feat-icon{
+  width:60px;
+  height:60px;
+  border-radius:16px;
+  background:linear-gradient(135deg,rgba(200,169,110,.18),rgba(200,169,110,.06));
+  border:1px solid rgba(200,169,110,.35);
+  color:#8b6945;
+  transition:all .35s;
+}
+.feat-icon svg{
+  width:28px;
+  height:28px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.why-card:hover .feat-icon{
+  background:linear-gradient(135deg,#c8a96e,#e8c97e);
+  color:#fff;
+  border-color:transparent;
+  transform:translateY(-4px) scale(1.05);
+}
+
+/* Why section: larger cards, bare icons */
+.why{padding:9rem 2rem}
+
+.why-grid{
+  max-width:1300px;
+  gap:2.5rem;
+}
+
+.why-card{
+  padding:3.5rem 2.5rem;
+  min-height:340px;
+}
+
+/* Icon with no box, border or background */
+.feat-icon,
+.why-card:hover .feat-icon{
+  width:auto;
+  height:auto;
+  background:none;
+  border:none;
+  border-radius:0;
+  box-shadow:none;
+  color:#a8843f;
+  margin:0 auto 1.5rem;
+}
+.feat-icon svg{
+  width:56px;
+  height:56px;
+  stroke-width:1.5;
+  transition:transform .35s ease, color .35s ease;
+}
+.why-card:hover .feat-icon{
+  transform:none;
+  color:#8b6945;
+}
+.why-card:hover .feat-icon svg{
+  transform:translateY(-4px) scale(1.1);
+}
+
+.why-title{
+  font-size:1.35rem;
+  margin-bottom:.8rem;
+}
+.why-desc{
+  font-size:1rem;
+  line-height:1.75;
+}
+*, *::before, *::after{border-radius:0 !important}
+::-webkit-scrollbar-thumb{border-radius:0 !important}
+
+
+/* ===== PLAIN COLOUR BUTTONS (no gradients) ===== */
+.btn-nav-gold,
+.btn-gold,
+.division-btn-gold{background:#c8a96e !important;background-image:none !important;color:#0b1426}
+.btn-nav-gold:hover,
+.btn-gold:hover,
+.division-btn-gold:hover{background:#b8954f !important}
+
+.btn-sky,
+.division-btn-blue{background:#0284c7 !important;background-image:none !important;color:#fff}
+.btn-sky:hover,
+.division-btn-blue:hover{background:#0369a1 !important}
+
+.nav-logo-icon{background:#c8a96e !important;background-image:none !important}
+
+
+/* ===== NO GLOW EFFECTS ===== */
+.orb{display:none !important}
+
+.btn-nav-outline:hover,
+.btn-nav-gold, .btn-nav-gold:hover,
+.btn-sky, .btn-sky:hover,
+.btn-gold, .btn-gold:hover,
+.division-btn, .division-btn:hover{box-shadow:none !important}
+
+.why-card:hover,
+.contact-home-card:hover{box-shadow:0 12px 30px rgba(11,20,38,.1) !important}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-logo">
+        <p>ZENAS GROUP</p>
+        <p>Limited</p>
+      </div>
+    </div>
+    <div class="nav-btns">
+      <a href="travel.html"><button class="btn-nav-outline">Explore Travel</button></a>
+      <a href="real-estate.html"><button class="btn-nav-gold">Real Estate</button></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose">✕</button>
+    <a href="travel.html"><button class="btn-sky" style="width:220px">Explore Travel</button></a>
+    <a href="real-estate.html"><button class="btn-gold" style="width:220px">Real Estate</button></a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+    <div class="orb orb3"></div>
+    <div class="hero-content">
+
+      <h1 class="hero-title">
+        ZENAS<br>
+        <span class="gold">GROUP</span><br>
+        LIMITED
+      </h1>
+      <p class="hero-sub">
+        Building Experiences Across<br>
+        <span>Travel</span> &amp; <span>Real Estate</span>
+      </p>
+      <div class="hero-btns">
+        <a href="travel.html"><button class="btn-sky">Explore Travel</button></a>
+        <a href="real-estate.html"><button class="btn-gold">Real Estate</button></a>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- OUR DIVISIONS -->
+  <section class="divisions" id="divisions">
+    <p class="section-label" data-aos="fade-up">Our Businesses</p>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Two World-Class <span
+        class="gold-text">Divisions</span></h2>
+    <p class="section-sub" data-aos="fade-up" data-aos-delay="160">From the skies of East Africa to premium city living
+      — we craft extraordinary experiences in travel and real estate.</p>
+
+    <div class="divisions-grid">
+      <!-- Travel Card -->
+      <div class="division-card" data-aos="fade-right" data-aos-delay="100">
+        <img src="./zenas travel photos/download (65).jpg" alt="Zenas Travel Agency" loading="lazy" />
+        <div class="division-overlay">
+          <div class="accent-bar accent-bar-blue"></div>
+          <div class="division-icon"></div>
+          <div class="division-name">Zenas Travel Agency</div>
+          <p class="division-desc">Curated East Africa tours, visa assistance, flight guidance, and personalized travel
+            consultation.</p>
+          <a href="travel.html"><button class="division-btn division-btn-blue">Explore Travel
+              →</button></a>
+        </div>
+      </div>
+
+      <!-- Real Estate Card -->
+      <div class="division-card" data-aos="fade-left" data-aos-delay="200">
+        <img src="./zenas estate section photos and videos/ZENAS WELCOME.jpeg" alt="Zenas Real Estate" loading="lazy" />
+        <div class="division-overlay">
+          <div class="accent-bar accent-bar-gold"></div>
+          <div class="division-icon"></div>
+          <div class="division-name">Zenas Real Estate</div>
+          <p class="division-desc">Premium Airbnb stays, property rentals, and trusted real estate investment
+            opportunities in Uganda.</p>
+          <a href="real-estate.html"><button class="division-btn division-btn-gold">Explore Properties
+              →</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+<div class="why-grid">
+  <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+    <div class="feat-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+    </div>
+    <div class="why-title">East Africa Experts</div>
+    <p class="why-desc">Deep knowledge of Uganda, Kenya, Tanzania, Rwanda and beyond — built from years of on-ground
+      experience.</p>
+  </div>
+
+  <div class="why-card" data-aos="fade-up" data-aos-delay="150">
+    <div class="feat-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+    </div>
+    <div class="why-title">Verified &amp; Trusted</div>
+    <p class="why-desc">All our properties, tour operators, and partners are verified for quality, safety, and
+      reliability.</p>
+  </div>
+
+  <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+    <div class="feat-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    </div>
+    <div class="why-title">Personal Service</div>
+    <p class="why-desc">We work with you one-on-one to deliver tailored experiences — not generic packages.</p>
+  </div>
+
+  <div class="why-card" data-aos="fade-up" data-aos-delay="250">
+    <div class="feat-icon">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg>
+    </div>
+    <div class="why-title">Premium Quality</div>
+    <p class="why-desc">42+ verified stays in Kampala &amp; Entebbe and hand-picked tours across East Africa.</p>
+  </div>
+</div>
+
+
+
+  <!-- CONTACT -->
+  <section class="contact-home" id="contact">
+    <p class="section-label" data-aos="fade-up">Get In Touch</p>
+    <h2 class="section-title" data-aos="fade-up" data-aos-delay="80">Start Your <span class="gold-text">Journey</span></h2>
+    <p class="section-sub" data-aos="fade-up" data-aos-delay="160">Reach our travel or real estate teams — we typically reply within 24 hours.</p>
+    <div class="contact-home-grid" data-aos="fade-up" data-aos-delay="200">
+      <a href="travel.html#contact" class="contact-home-card">
+        <span class="contact-home-tag" style="color:#38bdf8">Travel</span>
+        <h3>Zenas Travel Agency</h3>
+        <p>Tours, visas &amp; East Africa itineraries</p>
+        <span class="contact-home-cta">Book consultation →</span>
+      </a>
+      <a href="real-estate.html#contact" class="contact-home-card">
+        <span class="contact-home-tag" style="color:#c8a96e">Real Estate</span>
+        <h3>Zenas Real Estate</h3>
+        <p>Airbnb stays &amp; property investment</p>
+        <span class="contact-home-cta">Send inquiry →</span>
+      </a>
+      <div class="contact-home-card contact-home-info">
+        <span class="contact-home-tag" style="color:#e8c97e">Head Office</span>
+        <h3>Kampala, Uganda</h3>
+        <p><a href="tel:+256 786413870">+256 786413870</a></p>
+        <p><a href="mailto:info@zenasgroup.com">info@zenasgroup.com</a></p>
+        <a href="https://wa.me/+256 786413870" class="contact-home-cta" target="_blank" rel="noopener">WhatsApp us →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      
+      <div class="nav-logo-text" style="text-align:left">
+        <p>ZENAS GROUP</p>
+        <p>Limited</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="travel.html">Zenas Travel Agency</a>
+      <a href="real-estate.html">Zenas Real Estate</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p class="footer-copy">© 2026 Zenas Group Limited · All Rights Reserved · Kampala, Uganda./
+       Desighned By CODE X Academy Uganda 
+    </p>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zenas Group Limited",
+    "url": ".",
+    "description": "Travel and real estate experiences across East Africa",
+    "address": { "@type": "PostalAddress", "addressLocality": "Kampala", "addressCountry": "UG" },
+    "telephone": "+256 786413870",
+    "email": "info@zenasgroup.com"
+  }
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // AOS init
+    AOS.init({ duration: 700, once: true, offset: 80 });
+
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Mobile menu
+    document.getElementById('hamburger').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.add('open');
+    });
+    document.getElementById('mobileClose').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.remove('open');
+    });
+
+ // Hero: image stays fixed, text drifts and fades
+(function () {
+  const hero = document.getElementById('home');
+  const content = document.querySelector('.hero-content');
+  const hint = document.querySelector('.scroll-hint');
+  if (!hero || !content) return;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  const CONTENT_SPEED = isMobile ? 0.15 : 0.3;
+  const EASE = 0.1;
+
+  let target = window.scrollY;
+  let current = target;
+  let running = false;
+
+  function update() {
+    current += (target - current) * EASE;
+    if (Math.abs(target - current) < 0.1) current = target;
+
+    const h = hero.offsetHeight;
+    if (current <= h) {
+      content.style.transform = `translate3d(0, ${current * CONTENT_SPEED}px, 0)`;
+      content.style.opacity = Math.max(0, 1 - current / (h * 0.7));
+      if (hint) hint.style.opacity = Math.max(0, 1 - current / (h * 0.25));
+    }
+
+    if (current !== target) {
+      requestAnimationFrame(update);
+    } else {
+      running = false;
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    target = window.scrollY;
+    if (!running) {
+      running = true;
+      requestAnimationFrame(update);
+    }
+  }, { passive: true });
+
+  update();
+})();
+
+  </script>
+</body>
+
+</html>
