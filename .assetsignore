@@ -1,2 +1,10 @@
-zenas-group/
+.git
+.git/
+node_modules
+zenas-group/node_modules
+zenas-group/.next
+zenas-group/app/
+zenas-group/components/
+zenas-group/package.json
+zenas-group/package-lock.json
 zenas estate section photos and videos/WhatsApp Video*
